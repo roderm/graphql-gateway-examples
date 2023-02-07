@@ -1,0 +1,2 @@
+for user: query($a: ID!){user(id: $a){__typename id sayHi username}}
+for GitHubUser: query($a: ID!, $b: String){user(id: $a){__typename id ... on GitHubUser {sayHi(name: $b) username id}}}
