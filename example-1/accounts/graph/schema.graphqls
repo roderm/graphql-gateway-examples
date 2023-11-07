@@ -6,19 +6,19 @@ extend type Query {
 interface User @key(fields: "id") {
     id: ID!
     username: String!
-	sayHi(name: String): String!
+	sayHi(name: String!): String!
 }
 
 type GitHubUser implements User @key(fields: "id") {
   id: ID!
   username: String!
-  sayHi(name: String): String!
+  sayHi(name: String!): String!
   githubID: String
 }
 
 type AWSUser implements User @key(fields: "id") {
   id: ID!
   username: String!
-  sayHi(name: String): String!
+  sayHi(name: String!): String!
   awsID: String
 }

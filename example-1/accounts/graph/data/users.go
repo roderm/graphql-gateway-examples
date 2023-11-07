@@ -2,7 +2,9 @@ package data
 
 import "github.com/AlekSi/pointer"
 
-type User interface{}
+type User interface {
+	IsEntity()
+}
 
 type AWSUser struct {
 	ID       string  `json:"id"`
